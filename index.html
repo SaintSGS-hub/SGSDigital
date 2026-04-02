@@ -1,110 +1,289 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agência Premium - Criação de Sites</title>
-  <meta name="description" content="Criação Premium de Sites Profissionais. Elegância, SEO e Responsivo! Blog e Landing Pages inclusos.">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SGS Presença Digital — Websites Premium</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-  <script defer src="script.js"></script>
+  <meta name="description" content="SGS Presença Digital — criação de sites premium, otimizados para conversão. Modelos prontos, blogs e soluções sob medida.">
 </head>
 <body>
-  <!-- Header -->
-  <header class="header">
-    <div class="container header-container">
-      <a href="#" class="logo">
-        <div class="logo-icon">AG</div>
-        <span class="logo-text">Agência Premium</span>
+  <a class="skip-link" href="#main">Ir para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#">
+        <svg class="logo-mark" viewBox="0 0 100 100" aria-hidden="true"><rect x="10" y="10" width="80" height="80" rx="10" fill="#111"/></svg>
+        <div class="logo-text">
+          <span class="brand">SGS</span>
+          <small class="tag">Presença Digital</small>
+        </div>
       </a>
-      <nav id="navbar" class="navbar">
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#services">Serviços</a></li>
+
+      <nav class="nav" id="primary-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#home">Início</a></li>
+          <li><a href="#solucoes">Soluções</a></li>
+          <li><a href="#modelos">Modelos de Sites</a></li>
           <li><a href="#blog">Blog</a></li>
-          <li><a href="#about">Sobre</a></li>
-          <li><a href="#contact">Contato</a></li>
+          <li><a href="#contato" class="btn-outline">Contato</a></li>
         </ul>
       </nav>
-      <button class="btn btn-cta">Solicite um Orçamento</button>
-      <button class="menu-toggle" aria-label="Abrir Menu">
-        <span class="menu-bar"></span>
-      </button>
+
+      <div class="header-ctas">
+        <a href="#contato" class="btn btn-primary">Peça seu site agora</a>
+        <button id="nav-toggle" aria-label="Abrir menu" class="nav-toggle">
+          <span class="hamburger"></span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="container hero-content">
-      <div class="hero-text">
-        <h1>Sites Premium para Impulsionar o Seu Negócio</h1>
-        <p>Design responsivo, SEO otimizado e focado na conversão de clientes.</p>
-        <div class="hero-cta">
-          <a href="#services" class="btn btn-primary">Conheça Nossos Serviços</a>
-          <a href="#contact" class="btn btn-outline">Peça um Orçamento</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services" class="services">
-    <div class="container">
-      <h2 class="section-title">Nossos Serviços</h2>
-      <p class="section-desc">Soluções completas para fortalecer sua presença digital.</p>
-      <div class="card-grid">
-        <div class="service-card">
-          <i class="service-icon">🌐</i>
-          <h3>Sites Institucionais</h3>
-          <p>Design sofisticado para fortalecer a imagem da sua empresa.</p>
-        </div>
-        <div class="service-card">
-          <i class="service-icon">🛍️</i>
-          <h3>E-commerce</h3>
-          <p>Plataformas completas para um comércio eletrônico de sucesso.</p>
-        </div>
-        <div class="service-card">
-          <i class="service-icon">🎯</i>
-          <h3>Landing Pages</h3>
-          <p>Páginas de alta conversão para captar leads.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Blog -->
-  <section id="blog" class="blog">
-    <div class="container">
-      <h2 class="section-title">Nosso Blog</h2>
-      <p class="section-desc">Dicas e estratégias para criar sites incríveis e vender mais.</p>
-      <div class="card-grid">
-        <article class="blog-card">
-          <img src="https://source.unsplash.com/300x200/?website" alt="Artigo 1">
-          <div class="card-content">
-            <h3>SEO para Sites Modernos</h3>
-            <p>Como otimizar seu site para ranquear melhor no Google.</p>
+  <main id="main">
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Somos SGS Presença Digital — Websites incríveis, resultados reais.</h1>
+          <p class="lead">Projetos premium, responsivos e pensados para conversão. Modelos prontos ou sob medida, com SEO e performance otimizados.</p>
+          <div class="hero-ctas">
+            <a href="#contato" class="btn btn-primary">Criar seu site agora</a>
+            <a href="#modelos" class="btn btn-ghost">Explorar Modelos</a>
           </div>
-        </article>
-        <article class="blog-card">
-          <img src="https://source.unsplash.com/300x200/?uiux" alt="Artigo 2">
-          <div class="card-content">
-            <h3>Design que Converte</h3>
-            <p>Estratégias de design focadas em experiência do usuário.</p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
+          <ul class="trust">
+            <li>Entrega rápida</li>
+            <li>Design responsivo</li>
+            <li>Conversão focada</li>
+          </ul>
+        </div>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <p>© 2026 Agência Premium. Todos os direitos reservados.</p>
-        <p>Feito com <span style="color:var(--gold)">❤️</span> por nós!</p>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="device-mockup">
+            <div class="mockup-screen">
+              <div class="mockup-topbar"></div>
+              <div class="mockup-content">
+                <h3>Exemplo de site premium</h3>
+                <p>Design limpo, CTA estratégico e navegação otimizada.</p>
+                <div class="mockup-cta">Ver demonstração</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="solucoes" class="section solutions">
+      <div class="container section-inner">
+        <div class="section-header">
+          <h2>Nossas Soluções</h2>
+          <p>Desde sites institucionais até e-commerces otimizados — soluções que convertem.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <div class="card-icon">🌐</div>
+            <h3>Sites Personalizados</h3>
+            <p>Layouts pensados no posicionamento da sua marca e na jornada do cliente.</p>
+            <a href="#contato" class="card-link">Solicitar projeto</a>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🛒</div>
+            <h3>Lojas Virtuais</h3>
+            <p>E-commerces com checkout otimizado e integração com meios de pagamento.</p>
+            <a href="#contato" class="card-link">Ver planos</a>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">⚙️</div>
+            <h3>SEO & Performance</h3>
+            <p>Otimização técnica e conteúdos orientados para ranqueamento e conversão.</p>
+            <a href="#blog" class="card-link">Saiba mais</a>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">✍️</div>
+            <h3>Gestão de Conteúdo</h3>
+            <p>Produção e manutenção de blogs para atrair tráfego qualificado.</p>
+            <a href="#blog" class="card-link">Ver artigos</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="modelos" class="section models">
+      <div class="container section-inner">
+        <div class="section-header">
+          <h2>Vitrine de Modelos</h2>
+          <p>Modelos premium, prontos para personalizar — escolha e peça o seu.</p>
+        </div>
+
+        <div class="models-grid">
+          <article class="model-card" data-title="Modelo Corporativo" data-desc="Layout moderno para empresas e consultorias.">
+            <div class="model-thumb"></div>
+            <h3>Modelo Corporativo</h3>
+            <p>Foco em confiança e posicionamento de marca.</p>
+            <div class="model-actions">
+              <button class="btn btn-sm btn-outline preview-btn">Visualizar</button>
+              <a href="#contato" class="btn btn-sm btn-primary">Solicitar</a>
+            </div>
+          </article>
+
+          <article class="model-card" data-title="Loja Minimal" data-desc="Vitrine clean para lojas com alta taxa de conversão.">
+            <div class="model-thumb"></div>
+            <h3>Loja Minimal</h3>
+            <p>Checkout direto e foco em conversão de vendas.</p>
+            <div class="model-actions">
+              <button class="btn btn-sm btn-outline preview-btn">Visualizar</button>
+              <a href="#contato" class="btn btn-sm btn-primary">Solicitar</a>
+            </div>
+          </article>
+
+          <article class="model-card" data-title="Blog Premium" data-desc="Design elegante para produção de conteúdo e autoridade.">
+            <div class="model-thumb"></div>
+            <h3>Blog Premium</h3>
+            <p>Foco em leitura e engajamento com CTAs integrados.</p>
+            <div class="model-actions">
+              <button class="btn btn-sm btn-outline preview-btn">Visualizar</button>
+              <a href="#contato" class="btn btn-sm btn-primary">Solicitar</a>
+            </div>
+          </article>
+
+          <article class="model-card" data-title="Landing de Conversão" data-desc="Páginas focadas em gerar leads e vendas rápidas.">
+            <div class="model-thumb"></div>
+            <h3>Landing</h3>
+            <p>Estrutura A/B testable e formulários inteligentes.</p>
+            <div class="model-actions">
+              <button class="btn btn-sm btn-outline preview-btn">Visualizar</button>
+              <a href="#contato" class="btn btn-sm btn-primary">Solicitar</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog" class="section blog">
+      <div class="container section-inner">
+        <div class="section-header">
+          <h2>Do nosso Blog</h2>
+          <p>Conteúdos sobre marketing digital, tendências e otimização para sites.</p>
+        </div>
+
+        <div class="blog-grid">
+          <article class="post featured">
+            <div class="post-thumb"></div>
+            <div class="post-body">
+              <h3>Aumente sua taxa de conversão com micro-CTAs</h3>
+              <p>Pequenas mudanças no layout e na cópia podem elevar significativamente seus resultados.</p>
+              <a href="#blog" class="read-more">Ler artigo</a>
+            </div>
+          </article>
+
+          <div class="post-list">
+            <article class="post-sm">
+              <h4>Como escolher o tema ideal para sua loja</h4>
+              <p>O tema influencia velocidade, experiência e vendas.</p>
+            </article>
+            <article class="post-sm">
+              <h4>SEO técnico em 5 passos</h4>
+              <p>Checklist rápido para garantir indexação e desempenho.</p>
+            </article>
+            <article class="post-sm">
+              <h4>Design que converte: princípios</h4>
+              <p>Layout, cores e hierarquia visual voltados para ação.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="section contact">
+      <div class="container section-inner contact-inner">
+        <div class="contact-info">
+          <h2>Pronto para transformar sua presença digital?</h2>
+          <p>Deixe seus dados e nossa equipe entrará em contato com uma proposta personalizada.</p>
+          <ul class="contact-features">
+            <li>Proposta grátis</li>
+            <li>Entrega rápida</li>
+            <li>Suporte contínuo</li>
+          </ul>
+        </div>
+
+        <form id="contact-form" class="contact-form" aria-label="Formulário de contato">
+          <label>
+            Nome
+            <input type="text" name="name" required placeholder="Seu nome">
+          </label>
+
+          <label>
+            E-mail
+            <input type="email" name="email" required placeholder="seu@exemplo.com">
+          </label>
+
+          <label>
+            Mensagem
+            <textarea name="message" rows="5" required placeholder="Me fale sobre seu projeto..."></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Enviar pedido</button>
+            <small class="privacy">Ao enviar, você concorda em receber nossa proposta por e-mail.</small>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <svg class="logo-mark" viewBox="0 0 100 100" aria-hidden="true"><rect x="10" y="10" width="80" height="80" rx="10" fill="#000"/></svg>
+        <div>
+          <strong>SGS Presença Digital</strong>
+          <p>Sites premium com foco em resultado.</p>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <nav>
+          <a href="#solucoes">Soluções</a>
+          <a href="#modelos">Modelos</a>
+          <a href="#blog">Blog</a>
+          <a href="#contato">Contato</a>
+        </nav>
+        <div class="socials">
+          <a aria-label="Instagram" href="#" class="social">IG</a>
+          <a aria-label="LinkedIn" href="#" class="social">IN</a>
+          <a aria-label="Facebook" href="#" class="social">FB</a>
+        </div>
+      </div>
+
+      <div class="footer-meta">
+        <small>© <span id="year"></span> SGS Presença Digital — Todos os direitos reservados.</small>
       </div>
     </div>
   </footer>
 
+  <!-- Model Preview Modal -->
+  <div id="model-modal" class="modal" role="dialog" aria-hidden="true" aria-labelledby="model-modal-title">
+    <div class="modal-panel">
+      <button class="modal-close" aria-label="Fechar">&times;</button>
+      <div class="modal-content">
+        <h3 id="model-modal-title">Título do Modelo</h3>
+        <p id="model-modal-desc">Descrição do modelo escolhido.</p>
+        <div class="modal-mockup"></div>
+        <div class="modal-actions">
+          <a href="#contato" class="btn btn-primary">Solicitar este modelo</a>
+          <button class="btn btn-outline modal-close">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky CTA -->
+  <a href="#contato" class="sticky-cta" aria-label="Peça seu site agora">Peça seu site <span>→</span></a>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
