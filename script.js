@@ -1,92 +1,90 @@
-// script.js - comportamento: menu mobile, formulários (mock), testimonials carousel, toast
+// Interações: mobile nav toggle, model preview modal, contact form (fake), year update
+document.addEventListener('DOMContentLoaded', function(){
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-document.addEventListener('DOMContentLoaded', function () {
-  // Mobile nav toggle
-  const navToggle = document.getElementById('navToggle');
-  const mainNav = document.getElementById('mainNav');
-
+  // Mobile nav
+  const navToggle = document.getElementById('nav-toggle');
+  const nav = document.getElementById('primary-nav');
   navToggle.addEventListener('click', () => {
-    mainNav.classList.toggle('open');
-    navToggle.classList.toggle('open');
+    const isOpen = nav.getAttribute('aria-open') === 'true';
+    nav.setAttribute('aria-open', (!isOpen).toString());
+    navToggle.setAttribute('aria-expanded', (!isOpen).toString());
   });
 
-  // Simple toast
-  const toast = document.getElementById('toast');
-  function showToast(msg = 'Enviado com sucesso!') {
-    toast.textContent = msg;
-    toast.style.opacity = '1';
-    toast.style.transform = 'translateY(0)';
-    toast.style.pointerEvents = 'auto';
-    setTimeout(() => {
-      toast.style.opacity = '0';
-      toast.style.transform = 'translateY(10px)';
-      toast.style.pointerEvents = 'none';
-    }, 3200);
-  }
+  // Model preview modal
+  const modal = document.getElementById('model-modal');
+  const modalTitle = document.getElementById('model-modal-title');
+  const modalDesc = document.getElementById('model-modal-desc');
+  const modalCloseBtns = Array.from(document.querySelectorAll('.modal-close'));
+  const previewBtns = Array.from(document.querySelectorAll('.preview-btn'));
 
-  // Handle forms (mock submit)
-  function handleFormSubmission(form, successMessage) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const btn = form.querySelector('button[type="submit"]');
-      btn.disabled = true;
-      const old = btn.textContent;
-      btn.textContent = 'Enviando...';
-      setTimeout(() => {
-        btn.disabled = false;
-        btn.textContent = old;
-        form.reset();
-        showToast(successMessage || 'Mensagem enviada. Obrigado!');
-      }, 1000 + Math.random() * 700);
+  previewBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const card = e.target.closest('.model-card');
+      const title = card.dataset.title || 'Modelo';
+      const desc = card.dataset.desc || '';
+      modalTitle.textContent = title;
+      modalDesc.textContent = desc;
+      modal.setAttribute('aria-hidden','false');
+      document.body.style.overflow = 'hidden';
     });
+  });
+
+  modalCloseBtns.forEach(b => b.addEventListener('click', closeModal));
+  modal.addEventListener('click', (e) => {
+    if(e.target === modal) closeModal();
+  });
+
+  function closeModal(){
+    modal.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
   }
 
-  const leadForm = document.getElementById('leadForm');
-  const contactForm = document.getElementById('contactForm');
-  if (leadForm) handleFormSubmission(leadForm, 'Orçamento solicitado! Aguardamos seu contato.');
-  if (contactForm) handleFormSubmission(contactForm, 'Mensagem recebida! Respondemos em até 24h.');
+  // Contact form - fake submit with success microcopy
+  const contactForm = document.getElementById('contact-form');
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const submit = contactForm.querySelector('button[type="submit"]');
+    submit.disabled = true;
+    submit.textContent = 'Enviando...';
 
-  // Testimonials carousel (simple)
-  (function initTestimonials() {
-    const wrap = document.getElementById('testimonials');
-    if (!wrap) return;
-    const list = wrap.querySelectorAll('.testi-item');
-    const prevBtn = wrap.querySelector('.prev');
-    const nextBtn = wrap.querySelector('.next');
-    let idx = 0;
-    const total = list.length;
-    function setActive(i) {
-      list.forEach((li, k) => {
-        li.classList.toggle('active', k === i);
-      });
-    }
-    function next() { idx = (idx + 1) % total; setActive(idx); }
-    function prev() { idx = (idx - 1 + total) % total; setActive(idx); }
+    // Fake delay to simulate API
+    setTimeout(()=>{
+      submit.textContent = 'Enviado ✓';
+      contactForm.reset();
+      setTimeout(()=> {
+        submit.disabled = false;
+        submit.textContent = 'Enviar pedido';
+      }, 1800);
+    }, 1400);
+  });
 
-    let timer = setInterval(next, 6000);
-    wrap.addEventListener('mouseenter', () => clearInterval(timer));
-    wrap.addEventListener('mouseleave', () => timer = setInterval(next, 6000));
-    nextBtn.addEventListener('click', () => { next(); });
-    prevBtn.addEventListener('click', () => { prev(); });
-
-    // init
-    setActive(0);
-  })();
-
-  // Smooth scroll for anchors
+  // Smooth scroll for anchor links (modern support)
   document.querySelectorAll('a[href^="#"]').forEach(a=>{
     a.addEventListener('click', function(e){
-      const href = this.getAttribute('href');
-      if (href === '#' || href === '') return;
-      const el = document.querySelector(href);
-      if (!el) return;
-      e.preventDefault();
-      el.scrollIntoView({behavior:'smooth', block:'start'});
-      // close nav on mobile
-      if (mainNav.classList.contains('open')) {
-        mainNav.classList.remove('open');
+      const targetId = this.getAttribute('href');
+      if(targetId.length > 1){
+        e.preventDefault();
+        const el = document.querySelector(targetId);
+        if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
       }
     });
   });
 
+  // Optional: hide sticky CTA on top
+  const sticky = document.querySelector('.sticky-cta');
+  let lastScroll = window.scrollY;
+  window.addEventListener('scroll', () => {
+    const current = window.scrollY;
+    if (current > 120 && current > lastScroll) {
+      // scrolling down
+      sticky.style.transform = 'translateY(10px)';
+      sticky.style.opacity = '0.95';
+    } else {
+      sticky.style.transform = 'translateY(0)';
+      sticky.style.opacity = '1';
+    }
+    lastScroll = current;
+  }, {passive:true});
 });
