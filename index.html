@@ -4,15 +4,23 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>SGS Presença Digital — Websites Premium</title>
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- AOS CSS (CDN) -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+  <!-- Main styles -->
   <link rel="stylesheet" href="styles.css">
+
   <meta name="description" content="SGS Presença Digital — criação de sites premium, otimizados para conversão. Modelos prontos, blogs e soluções sob medida.">
 </head>
 <body>
   <a class="skip-link" href="#main">Ir para o conteúdo</a>
 
-  <header class="site-header">
+  <header class="site-header" data-aos="fade-down" data-aos-duration="700">
     <div class="container header-inner">
       <a class="logo" href="#">
         <svg class="logo-mark" viewBox="0 0 100 100" aria-hidden="true"><rect x="10" y="10" width="80" height="80" rx="10" fill="#111"/></svg>
@@ -44,21 +52,21 @@
   <main id="main">
     <section id="home" class="hero">
       <div class="container hero-inner">
-        <div class="hero-copy">
+        <div class="hero-copy" data-aos="fade-right" data-aos-duration="900" data-aos-delay="100">
           <h1>Somos SGS Presença Digital — Websites incríveis, resultados reais.</h1>
           <p class="lead">Projetos premium, responsivos e pensados para conversão. Modelos prontos ou sob medida, com SEO e performance otimizados.</p>
           <div class="hero-ctas">
-            <a href="#contato" class="btn btn-primary">Criar seu site agora</a>
+            <a href="#contato" class="btn btn-primary hero-cta">Criar seu site agora</a>
             <a href="#modelos" class="btn btn-ghost">Explorar Modelos</a>
           </div>
-          <ul class="trust">
+          <ul class="trust" data-aos="fade-up" data-aos-duration="700" data-aos-delay="300">
             <li>Entrega rápida</li>
             <li>Design responsivo</li>
             <li>Conversão focada</li>
           </ul>
         </div>
 
-        <div class="hero-visual" aria-hidden="true">
+        <div class="hero-visual" aria-hidden="true" data-aos="zoom-in" data-aos-duration="900" data-aos-delay="150">
           <div class="device-mockup">
             <div class="mockup-screen">
               <div class="mockup-topbar"></div>
@@ -75,34 +83,34 @@
 
     <section id="solucoes" class="section solutions">
       <div class="container section-inner">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-up">
           <h2>Nossas Soluções</h2>
           <p>Desde sites institucionais até e-commerces otimizados — soluções que convertem.</p>
         </div>
 
-        <div class="cards">
-          <article class="card">
+        <div class="cards" aria-hidden="false">
+          <article class="card" data-aos="fade-up" data-aos-delay="80">
             <div class="card-icon">🌐</div>
             <h3>Sites Personalizados</h3>
             <p>Layouts pensados no posicionamento da sua marca e na jornada do cliente.</p>
             <a href="#contato" class="card-link">Solicitar projeto</a>
           </article>
 
-          <article class="card">
+          <article class="card" data-aos="fade-up" data-aos-delay="160">
             <div class="card-icon">🛒</div>
             <h3>Lojas Virtuais</h3>
             <p>E-commerces com checkout otimizado e integração com meios de pagamento.</p>
             <a href="#contato" class="card-link">Ver planos</a>
           </article>
 
-          <article class="card">
+          <article class="card" data-aos="fade-up" data-aos-delay="240">
             <div class="card-icon">⚙️</div>
             <h3>SEO & Performance</h3>
             <p>Otimização técnica e conteúdos orientados para ranqueamento e conversão.</p>
             <a href="#blog" class="card-link">Saiba mais</a>
           </article>
 
-          <article class="card">
+          <article class="card" data-aos="fade-up" data-aos-delay="320">
             <div class="card-icon">✍️</div>
             <h3>Gestão de Conteúdo</h3>
             <p>Produção e manutenção de blogs para atrair tráfego qualificado.</p>
@@ -114,13 +122,13 @@
 
     <section id="modelos" class="section models">
       <div class="container section-inner">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-up">
           <h2>Vitrine de Modelos</h2>
           <p>Modelos premium, prontos para personalizar — escolha e peça o seu.</p>
         </div>
 
         <div class="models-grid">
-          <article class="model-card" data-title="Modelo Corporativo" data-desc="Layout moderno para empresas e consultorias.">
+          <article class="model-card" data-aos="flip-left" data-aos-delay="80" data-title="Modelo Corporativo" data-desc="Layout moderno para empresas e consultorias.">
             <div class="model-thumb"></div>
             <h3>Modelo Corporativo</h3>
             <p>Foco em confiança e posicionamento de marca.</p>
@@ -130,7 +138,7 @@
             </div>
           </article>
 
-          <article class="model-card" data-title="Loja Minimal" data-desc="Vitrine clean para lojas com alta taxa de conversão.">
+          <article class="model-card" data-aos="flip-left" data-aos-delay="160" data-title="Loja Minimal" data-desc="Vitrine clean para lojas com alta taxa de conversão.">
             <div class="model-thumb"></div>
             <h3>Loja Minimal</h3>
             <p>Checkout direto e foco em conversão de vendas.</p>
@@ -140,7 +148,7 @@
             </div>
           </article>
 
-          <article class="model-card" data-title="Blog Premium" data-desc="Design elegante para produção de conteúdo e autoridade.">
+          <article class="model-card" data-aos="flip-left" data-aos-delay="240" data-title="Blog Premium" data-desc="Design elegante para produção de conteúdo e autoridade.">
             <div class="model-thumb"></div>
             <h3>Blog Premium</h3>
             <p>Foco em leitura e engajamento com CTAs integrados.</p>
@@ -150,7 +158,7 @@
             </div>
           </article>
 
-          <article class="model-card" data-title="Landing de Conversão" data-desc="Páginas focadas em gerar leads e vendas rápidas.">
+          <article class="model-card" data-aos="flip-left" data-aos-delay="320" data-title="Landing de Conversão" data-desc="Páginas focadas em gerar leads e vendas rápidas.">
             <div class="model-thumb"></div>
             <h3>Landing</h3>
             <p>Estrutura A/B testable e formulários inteligentes.</p>
@@ -165,13 +173,13 @@
 
     <section id="blog" class="section blog">
       <div class="container section-inner">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-up">
           <h2>Do nosso Blog</h2>
           <p>Conteúdos sobre marketing digital, tendências e otimização para sites.</p>
         </div>
 
         <div class="blog-grid">
-          <article class="post featured">
+          <article class="post featured" data-aos="fade-up" data-aos-delay="120">
             <div class="post-thumb"></div>
             <div class="post-body">
               <h3>Aumente sua taxa de conversão com micro-CTAs</h3>
@@ -181,15 +189,15 @@
           </article>
 
           <div class="post-list">
-            <article class="post-sm">
+            <article class="post-sm" data-aos="fade-right" data-aos-delay="160">
               <h4>Como escolher o tema ideal para sua loja</h4>
               <p>O tema influencia velocidade, experiência e vendas.</p>
             </article>
-            <article class="post-sm">
+            <article class="post-sm" data-aos="fade-right" data-aos-delay="200">
               <h4>SEO técnico em 5 passos</h4>
               <p>Checklist rápido para garantir indexação e desempenho.</p>
             </article>
-            <article class="post-sm">
+            <article class="post-sm" data-aos="fade-right" data-aos-delay="240">
               <h4>Design que converte: princípios</h4>
               <p>Layout, cores e hierarquia visual voltados para ação.</p>
             </article>
@@ -200,7 +208,7 @@
 
     <section id="contato" class="section contact">
       <div class="container section-inner contact-inner">
-        <div class="contact-info">
+        <div class="contact-info" data-aos="fade-right">
           <h2>Pronto para transformar sua presença digital?</h2>
           <p>Deixe seus dados e nossa equipe entrará em contato com uma proposta personalizada.</p>
           <ul class="contact-features">
@@ -210,7 +218,7 @@
           </ul>
         </div>
 
-        <form id="contact-form" class="contact-form" aria-label="Formulário de contato">
+        <form id="contact-form" class="contact-form" aria-label="Formulário de contato" data-aos="fade-left">
           <label>
             Nome
             <input type="text" name="name" required placeholder="Seu nome">
@@ -235,7 +243,7 @@
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" data-aos="fade-up">
     <div class="container footer-inner">
       <div class="footer-brand">
         <svg class="logo-mark" viewBox="0 0 100 100" aria-hidden="true"><rect x="10" y="10" width="80" height="80" rx="10" fill="#000"/></svg>
@@ -284,6 +292,14 @@
   <!-- Sticky CTA -->
   <a href="#contato" class="sticky-cta" aria-label="Peça seu site agora">Peça seu site <span>→</span></a>
 
+  <!-- GSAP (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <!-- Lenis (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@0.2.25/bundled/lenis.min.js"></script>
+  <!-- AOS JS (CDN) -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Main script -->
   <script src="script.js" defer></script>
 </body>
 </html>
