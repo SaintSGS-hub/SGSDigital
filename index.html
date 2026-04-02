@@ -1,26 +1,24 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Agência Premium • Criação de Sites & Blog</title>
-  <meta name="description" content="Criação de sites modernos, responsivos e otimizados para conversão. Design premium com suporte e manutenção." />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agência Premium - Criação de Sites</title>
+  <meta name="description" content="Criação Premium de Sites Profissionais. Elegância, SEO e Responsivo! Blog e Landing Pages inclusos.">
   <link rel="stylesheet" href="styles.css">
-  <!-- Icons -->
-  <script src="https://kit.fontawesome.com/yourkit.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="#">
-        <span class="logo-mark">AG</span>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="#" class="logo">
+        <div class="logo-icon">AG</div>
         <span class="logo-text">Agência Premium</span>
       </a>
-
-      <nav class="nav" id="mainNav" aria-label="Navegação principal">
-        <ul class="nav-list">
+      <nav id="navbar" class="navbar">
+        <ul class="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#services">Serviços</a></li>
           <li><a href="#blog">Blog</a></li>
@@ -28,277 +26,85 @@
           <li><a href="#contact">Contato</a></li>
         </ul>
       </nav>
-
-      <div class="header-ctas">
-        <a class="btn btn-ghost" href="#blog">Blog</a>
-        <a class="btn btn-primary" href="#contact">Solicitar Orçamento</a>
-        <button id="navToggle" class="nav-toggle" aria-label="Abrir menu">
-          <span class="hamburger"></span>
-        </button>
-      </div>
+      <button class="btn btn-cta">Solicite um Orçamento</button>
+      <button class="menu-toggle" aria-label="Abrir Menu">
+        <span class="menu-bar"></span>
+      </button>
     </div>
   </header>
 
-  <main>
-    <!-- HERO -->
-    <section id="home" class="hero">
-      <div class="hero-overlay"></div>
-      <div class="container hero-inner">
-        <div class="hero-copy">
-          <h1>Mais do que um site, a primeira impressão do seu negócio.</h1>
-          <p class="lead">Transformamos ideias em sites modernos, responsivos e otimizados para conversão — design premium que converte visitantes em clientes.</p>
-          <div class="hero-ctas">
-            <a href="#contact" class="btn btn-primary large">Fale com um Especialista</a>
-            <a href="#services" class="btn btn-ghost large">Ver Serviços</a>
-          </div>
-        </div>
-
-        <aside class="hero-form" aria-labelledby="formTitle">
-          <h2 id="formTitle">Peça um Orçamento</h2>
-          <form id="leadForm" class="form">
-            <label>
-              <span class="sr-only">Nome</span>
-              <input type="text" name="name" placeholder="Seu nome" required>
-            </label>
-            <label>
-              <span class="sr-only">E-mail</span>
-              <input type="email" name="email" placeholder="seu@exemplo.com" required>
-            </label>
-            <label>
-              <span class="sr-only">Mensagem</span>
-              <textarea name="message" rows="3" placeholder="Conte-nos seu projeto" required></textarea>
-            </label>
-            <div class="form-actions">
-              <button type="submit" class="btn btn-primary">Peça um Orçamento Agora</button>
-            </div>
-            <p class="privacy-note">Sem spam. Resposta em até 24h.</p>
-          </form>
-        </aside>
-      </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services" class="section services">
-      <div class="container">
-        <header class="section-header">
-          <h2>Nossos Serviços</h2>
-          <p>Oferecemos soluções completas para presença digital com foco em resultados.</p>
-        </header>
-
-        <div class="cards-grid">
-          <article class="card">
-            <div class="card-ix"><i class="fas fa-globe"></i></div>
-            <h3>Sites Institucionais</h3>
-            <p>Design elegante, performance e experiência do usuário para empresas que desejam autoridade online.</p>
-            <a class="card-link" href="#contact">Saiba Mais</a>
-          </article>
-
-          <article class="card">
-            <div class="card-ix"><i class="fas fa-shopping-cart"></i></div>
-            <h3>E-commerce</h3>
-            <p>Plataformas otimizadas para vendas com checkout eficiente e integração de pagamentos.</p>
-            <a class="card-link" href="#contact">Saiba Mais</a>
-          </article>
-
-          <article class="card">
-            <div class="card-ix"><i class="fas fa-bullseye"></i></div>
-            <h3>Landing Pages & Conversão</h3>
-            <p>Páginas estrategicamente desenhadas para captar leads e maximizar taxa de conversão.</p>
-            <a class="card-link" href="#contact">Saiba Mais</a>
-          </article>
-
-          <article class="card">
-            <div class="card-ix"><i class="fas fa-search"></i></div>
-            <h3>SEO & Performance</h3>
-            <p>Otimização técnica, conteúdo e velocidade para melhorar rankeamento e performance do site.</p>
-            <a class="card-link" href="#contact">Saiba Mais</a>
-          </article>
-
-          <article class="card">
-            <div class="card-ix"><i class="fas fa-feather-alt"></i></div>
-            <h3>Blog Corporativo</h3>
-            <p>Estratégia de conteúdo e blog otimizado para atrair tráfego qualificado e autoridade.</p>
-            <a class="card-link" href="#blog">Ver Artigos</a>
-          </article>
-
-          <article class="card">
-            <div class="card-ix"><i class="fas fa-cog"></i></div>
-            <h3>Manutenção & Suporte</h3>
-            <p>Planos contínuos de atualização, backup e segurança para manter seu site estável.</p>
-            <a class="card-link" href="#contact">Saiba Mais</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- SOCIAL PROOF / TESTIMONIALS -->
-    <section class="section testimonials">
-      <div class="container">
-        <header class="section-header">
-          <h2>O que nossos clientes dizem</h2>
-          <p>Resultados, confiança e parcerias duradouras.</p>
-        </header>
-
-        <div class="testimonials-wrap" id="testimonials">
-          <button class="testi-btn prev" aria-label="Anterior">‹</button>
-          <ul class="testi-list">
-            <li class="testi-item active">
-              <blockquote>
-                "A equipe entregou um site incrível — rápido, elegante e com excelente usabilidade. As conversões subiram 38% em 2 meses."
-              </blockquote>
-              <cite>— João Silva, CEO • Empresa X</cite>
-            </li>
-            <li class="testi-item">
-              <blockquote>
-                "Profissionais, prazos cumpridos e resultados reais. Recomendo para qualquer empresa que queira ser referência no seu nicho."
-              </blockquote>
-              <cite>— Maria Oliveira, Marketing • Startup Y</cite>
-            </li>
-            <li class="testi-item">
-              <blockquote>
-                "Design premium, atendimento impecável e suporte ágil. O investimento valeu cada centavo."
-              </blockquote>
-              <cite>— Ricardo Costa, Diretor Comercial • Loja Z</cite>
-            </li>
-          </ul>
-          <button class="testi-btn next" aria-label="Próximo">›</button>
-        </div>
-
-        <div class="clients-logos">
-          <img src="https://via.placeholder.com/140x48?text=Logo1" alt="Cliente 1">
-          <img src="https://via.placeholder.com/140x48?text=Logo2" alt="Cliente 2">
-          <img src="https://via.placeholder.com/140x48?text=Logo3" alt="Cliente 3">
-          <img src="https://via.placeholder.com/140x48?text=Logo4" alt="Cliente 4">
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA BANNER -->
-    <section class="cta-banner">
-      <div class="container cta-inner">
-        <h3>Pronto para impressionar online?</h3>
-        <p>Tenha uma presença digital que reflete o valor da sua marca. Vamos criar algo extraordinário juntos.</p>
-        <a class="btn btn-primary large" href="#contact">Fale Conosco Agora</a>
-      </div>
-    </section>
-
-    <!-- BLOG -->
-    <section id="blog" class="section blog">
-      <div class="container">
-        <header class="section-header">
-          <h2>Do nosso blog</h2>
-          <p>Dicas, estudos de caso e estratégias de conversão e design.</p>
-        </header>
-
-        <div class="blog-grid">
-          <article class="blog-card">
-            <img src="https://source.unsplash.com/800x600/?web,design" alt="">
-            <div class="blog-content">
-              <h4>Aumente suas conversões com landing pages melhores</h4>
-              <p class="meta">15 mar 2026 • SEO, Conversão</p>
-              <p>Conteúdo prático com exemplos reais para melhorar taxas de conversão em páginas de captura.</p>
-              <a class="read-more" href="#">Leia Mais →</a>
-            </div>
-          </article>
-
-          <article class="blog-card">
-            <img src="https://source.unsplash.com/800x601/?ecommerce" alt="">
-            <div class="blog-content">
-              <h4>Checklist técnico para lojas virtuais de alto desempenho</h4>
-              <p class="meta">02 abr 2026 • E-commerce</p>
-              <p>Checklist para garantir velocidade, segurança e usabilidade no seu e-commerce.</p>
-              <a class="read-more" href="#">Leia Mais →</a>
-            </div>
-          </article>
-
-          <article class="blog-card">
-            <img src="https://source.unsplash.com/800x602/?seo,content" alt="">
-            <div class="blog-content">
-              <h4>Como o SEO técnico acelera o crescimento orgânico</h4>
-              <p class="meta">20 fev 2026 • SEO</p>
-              <p>Estratégias técnicas e práticas recomendadas para melhorar seu posicionamento.</p>
-              <a class="read-more" href="#">Leia Mais →</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT / CONTACT -->
-    <section id="about" class="section about">
-      <div class="container about-inner">
-        <div class="about-text">
-          <h2>Sobre nós</h2>
-          <p>Agência focada em produtos digitais premium. Misturamos estratégia, design e tecnologia para gerar resultados mensuráveis aos nossos clientes.</p>
-          <ul class="about-list">
-            <li><strong>25+</strong> projetos entregues</li>
-            <li><strong>100%</strong> sites responsivos</li>
-            <li><strong>Suporte</strong> dedicado e manutenção contínua</li>
-          </ul>
-        </div>
-
-        <aside id="contact" class="contact-card">
-          <h3>Contato</h3>
-          <p>Pronto para começar? Envie uma mensagem.</p>
-          <form id="contactForm" class="form small">
-            <label><input type="text" name="cname" placeholder="Nome" required></label>
-            <label><input type="email" name="cemail" placeholder="E-mail" required></label>
-            <label><input type="tel" name="cphone" placeholder="Telefone (opcional)"></label>
-            <label><textarea name="cmessage" rows="4" placeholder="Sua mensagem" required></textarea></label>
-            <div class="form-actions">
-              <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
-            </div>
-          </form>
-
-          <div class="contact-info">
-            <p><strong>Email:</strong> contato@agenciapremium.com</p>
-            <p><strong>Telefone:</strong> +55 (11) 99999-9999</p>
-            <p class="muted">Atendimento: seg-sex • 09:00–18:00</p>
-          </div>
-        </aside>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-col">
-        <a class="logo minimal" href="#"><span class="logo-mark">AG</span> Agência Premium</a>
-        <p class="muted">Design premium, performance e suporte contínuo.</p>
-      </div>
-
-      <div class="footer-col">
-        <h4>Serviços</h4>
-        <ul class="footer-links">
-          <li><a href="#services">Sites Institucionais</a></li>
-          <li><a href="#services">E-commerce</a></li>
-          <li><a href="#services">Landing Pages</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Contato</h4>
-        <p>contato@agenciapremium.com</p>
-        <p>+55 (11) 99999-9999</p>
-        <div class="socials">
-          <a href="#" aria-label="Instagram" class="social"><i class="fab fa-instagram"></i></a>
-          <a href="#" aria-label="LinkedIn" class="social"><i class="fab fa-linkedin"></i></a>
-          <a href="#" aria-label="Facebook" class="social"><i class="fab fa-facebook"></i></a>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>Sites Premium para Impulsionar o Seu Negócio</h1>
+        <p>Design responsivo, SEO otimizado e focado na conversão de clientes.</p>
+        <div class="hero-cta">
+          <a href="#services" class="btn btn-primary">Conheça Nossos Serviços</a>
+          <a href="#contact" class="btn btn-outline">Peça um Orçamento</a>
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="footer-bottom">
-      <div class="container">
-        <hr class="footer-sep">
-        <p class="copyright">© 2026 Agência Premium. Todos os direitos reservados.</p>
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2 class="section-title">Nossos Serviços</h2>
+      <p class="section-desc">Soluções completas para fortalecer sua presença digital.</p>
+      <div class="card-grid">
+        <div class="service-card">
+          <i class="service-icon">🌐</i>
+          <h3>Sites Institucionais</h3>
+          <p>Design sofisticado para fortalecer a imagem da sua empresa.</p>
+        </div>
+        <div class="service-card">
+          <i class="service-icon">🛍️</i>
+          <h3>E-commerce</h3>
+          <p>Plataformas completas para um comércio eletrônico de sucesso.</p>
+        </div>
+        <div class="service-card">
+          <i class="service-icon">🎯</i>
+          <h3>Landing Pages</h3>
+          <p>Páginas de alta conversão para captar leads.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog -->
+  <section id="blog" class="blog">
+    <div class="container">
+      <h2 class="section-title">Nosso Blog</h2>
+      <p class="section-desc">Dicas e estratégias para criar sites incríveis e vender mais.</p>
+      <div class="card-grid">
+        <article class="blog-card">
+          <img src="https://source.unsplash.com/300x200/?website" alt="Artigo 1">
+          <div class="card-content">
+            <h3>SEO para Sites Modernos</h3>
+            <p>Como otimizar seu site para ranquear melhor no Google.</p>
+          </div>
+        </article>
+        <article class="blog-card">
+          <img src="https://source.unsplash.com/300x200/?uiux" alt="Artigo 2">
+          <div class="card-content">
+            <h3>Design que Converte</h3>
+            <p>Estratégias de design focadas em experiência do usuário.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>© 2026 Agência Premium. Todos os direitos reservados.</p>
+        <p>Feito com <span style="color:var(--gold)">❤️</span> por nós!</p>
       </div>
     </div>
   </footer>
 
-  <!-- Toast / Modal -->
-  <div id="toast" class="toast" role="status" aria-live="polite"></div>
-
-  <script src="script.js"></script>
 </body>
 </html>
